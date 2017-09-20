@@ -1,0 +1,29 @@
+{
+  "name": "@skizzinger/react-api-manager",
+  "version": "0.0.1",
+  "description": "API Manager used in many of my React.js projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skizzo/react-api-manager.git"
+  },
+  "keywords": [
+    "fetch",
+    "get",
+    "api",
+    "http",
+    "request"
+  ],
+  "author": "Stephan Müller <steff@nerdybirdy.net> (https://nerdybirdy.net)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skizzo/react-api-manager/issues"
+  },
+  "homepage": "https://github.com/skizzo/react-api-manager#readme",
+  "engines": {
+    "node": ">=4.2.4"
+  },
+}

@@ -1,0 +1,1 @@
+console.log ("react-api-manager included successfully.")

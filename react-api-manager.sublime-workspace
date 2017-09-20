@@ -1,0 +1,218 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"API",
+				"APIManager"
+			],
+			[
+				"toBe",
+				"toBeDefined"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Volumes/HDD1/GitHub/react-api-manager"
+	],
+	"file_history":
+	[
+		"/Volumes/HDD1/GitHub/nerdybirdy/_server/reimmund/api/php/reimmund/SKSlimHelper.class.php",
+		"/Volumes/HDD1/GitHub/nerdybirdy/src/data/actions/ASession.js",
+		"/Volumes/HDD1/GitHub/nerdybirdy/__tests__/API.test.js",
+		"/Volumes/HDD1/GitHub/nerdybirdy/__tests__/data/redux.test.js",
+		"/Volumes/HDD1/GitHub/nerdybirdy/__tests__/api.js"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Volumes/HDD1/GitHub/nerdybirdy/_server/api"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"”",
+			"“",
+			"resetCache",
+			"resetca",
+			"\t\t//\tcreate sitemap.xml, testwise\n",
+			"201",
+			"200",
+			"SLIM_CACHING_ENABLED",
+			"--verbose",
+			"'",
+			"\"",
+			"erroror",
+			"err",
+			"res",
+			"timeBetweenRetries",
+			"_this",
+			"../",
+			"toBeEqual",
+			"actualState",
+			"actions"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 20.0
+	},
+	"input":
+	{
+		"height": 28.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 82.0
+	},
+	"pinned_build_system": "",
+	"project": "react-api-manager.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"skslimhel",
+				"nerdybirdy/_server/reimmund/api/php/reimmund/SKSlimHelper.class.php"
+			],
+			[
+				"packa",
+				"nerdybirdy/package.json"
+			],
+			[
+				"config.js",
+				"nerdybirdy/src/config.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 290.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
