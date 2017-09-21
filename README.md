@@ -1,4 +1,4 @@
-# react-api-manager
+# React API Manager
 
 APIManager used in most React.js projects. Basically a `fetch` variant that's able to handle retries and timeouts. [CHANGELOG.md](https://github.com/skizzo/react-api-manager/blob/master/CHANGELOG.md "react-api-manager Change Log")
 
@@ -47,7 +47,6 @@ Returns a promise that either
 
   - `Unknown`: Some weird shit happened.
 
+## Contributing
 
-  ## Contributing
-
-  This package is customized for a SLIM REST API and should not be contributed to.
+This package is customized for a SLIM REST API and should not be contributed to.
