@@ -1,6 +1,6 @@
 {
-  "name": "@skizzinger/react-api-manager",
-  "version": "0.0.1",
+  "name": "react-api-manager",
+  "version": "0.0.2",
   "description": "API Manager used in many of my React.js projects.",
   "main": "index.js",
   "scripts": {
@@ -26,4 +26,13 @@
   "engines": {
     "node": ">=4.2.4"
   },
+  "peerDependencies": {
+    "react": "^15.5.4"
+  },
+  "dependencies": {
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "log-with-style": "^0.3.0"
+  }
 }
