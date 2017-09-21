@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [v0.0.3]
+
+- Check check
+
 ## [v0.0.2]
 
 - Added dependencies (react, whatwg-fetch, log-with-style)
