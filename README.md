@@ -4,9 +4,7 @@ APIManager used in most React.js projects. Basically a `fetch` variant that's ab
 
 ## Usage
 
-### Initialization
-
-`APIManager.init (options) : void`
+### APIManager.init (options) : void
 
 #### Parameter options
 
@@ -14,9 +12,8 @@ APIManager used in most React.js projects. Basically a `fetch` variant that's ab
 
 - `debug`: debug mode (default: `false`)
 
-### Calling API
 
-`APManager.fetchAPI (params) : Promise`
+### APManager.fetchAPI (params) : Promise
 
 #### Parameter params
 
