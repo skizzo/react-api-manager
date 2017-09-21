@@ -13,7 +13,7 @@ APIManager used in most React.js projects. Basically a `fetch` variant that's ab
 - `debug`: debug mode (default: `false`)
 
 
-### APManager.fetchAPI (params) : Promise
+### APIManager.fetchAPI (params) : Promise
 
 #### Parameter params
 
@@ -29,9 +29,9 @@ APIManager used in most React.js projects. Basically a `fetch` variant that's ab
 
 Returns a promise that either 
 
-- resolves and contains data in JSON format, or
+- **resolves** and contains data in JSON format, or
 
-- rejects and contains error data, possible values for `error.message`: 
+- **rejects** and contains error data, possible values for **`error.message`**: 
 
   - `Timeout`: All retries have been tried, request still timed out.
 
