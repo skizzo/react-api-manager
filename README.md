@@ -19,16 +19,25 @@ APIManager used in most React.js projects. Basically a `fetch` variant that's ab
 
 - `path`: API path **without leading slash**, e.g `projects/my-test-project`
 
-- `params`: Array of parameters
+- `params`: (Optional) array of parameters
 
-- `retries`: Amount of retries in case fetch fails (default: `5`)
+- `retries`: (Optional) Amount of retries in case fetch fails (default: `5`)
 
-- `timeout`: Amount of milli seconds until fetch fails with Timeout error
+- `timeout`: (Optional) Amount of milli seconds until fetch fails with Timeout error (default: `10000` aka 10s)
 
 #### Returns
 
 Returns a promise that either 
 
-- resolves and contains data in JSON format
+- resolves and contains data in JSON format, or
 
-- rejects and contains error data
+- rejects and contains error data, possible values for `error.message`: 
+
+  - `Timeout`: All retries have been tried, request still timed out.
+
+  - `Server` (500): There was an error on the server, in this case the error object also contains the properties `file`, `line` and `message`.
+  Check this out, next line.
+
+  - `MethodNotFound` (404): The API method could not be found on server.
+
+  - `Unknown`: Some weird shit happened.
