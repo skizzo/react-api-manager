@@ -1,6 +1,7 @@
 # react-api-manager
 
-APIManager used in most React.js projects. Basically a `fetch` variant that's able to handle retries and timeouts.
+APIManager used in most React.js projects. Basically a `fetch` variant that's able to handle retries and timeouts. [CHANGELOG.md](https://github.com/skizzo/react-api-manager/blob/master/CHANGELOG.md "react-api-manager Change Log")
+
 
 ## Usage
 
