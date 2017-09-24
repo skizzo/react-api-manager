@@ -15,7 +15,8 @@
     "get",
     "api",
     "http",
-    "request"
+    "request",
+    "nerdybirdy"
   ],
   "author": "Stephan Müller <steff@nerdybirdy.net> (https://nerdybirdy.net)",
   "license": "ISC",
