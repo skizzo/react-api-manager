@@ -1,5 +1,6 @@
 
-//  v0.0.4 - see https://github.com/skizzo/react-api-manager/blob/master/CHANGELOG.md
+//  see https://github.com/skizzo/react-api-manager/blob/master/CHANGELOG.md
+const VERSION = "0.0.5"
 
 var log = require ("log-with-style")
 import "whatwg-fetch"
@@ -46,7 +47,7 @@ const promiseTimeout = (ms, promise) => {
 
 var APIManager = {
 
-  init (options) {
+  init (options = {}) {
     const {apiroot, debug} = options
 
     if (!apiroot) {
@@ -58,7 +59,7 @@ var APIManager = {
     this.apiroot = apiroot
     this.debug = !!debug ? debug : false
 
-    this.debugger ("init ()", options)
+    this.debugger ("init ()", {...options, version: VERSION})
 
     return new Promise ((resolve, reject) => {
       const pathFull = `${this.apiroot}/status`
