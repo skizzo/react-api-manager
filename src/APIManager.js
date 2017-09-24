@@ -1,9 +1,7 @@
-
-//  see https://github.com/skizzo/react-api-manager/blob/master/CHANGELOG.md
-const VERSION = "0.0.5"
+const VERSION = "0.0.7"
 
 var log = require ("log-with-style")
-import "whatwg-fetch"
+require ("whatwg-fetch")
 
 class CustomError extends Error {
   constructor (data = null, ...args) {
@@ -20,7 +18,7 @@ const getTimeoutPromise = (ms, promise, contentObj = {type: "Timeout"}) => {
     promise.then (resolve, reject)
   })
 }
-
+/*
 const getFetchPostParams = (params = {}) => {
   return {
     method: 'POST',
@@ -32,18 +30,7 @@ const getFetchPostParams = (params = {}) => {
     body: JSON.stringify (params)
   }
 }
-
-const promiseTimeout = (ms, promise) => {
-  // Create a promise that rejects in <ms> milliseconds
-  let timeout = new Promise ((resolve, reject) => {
-    let id = setTimeout(() => {
-      clearTimeout (id);
-      reject ({type: "Timeout", message: 'Timed out in '+ ms + 'ms.'})
-    }, ms)
-  })
-  // Returns a race between our timeout and the passed in promise
-  return Promise.race ([promise, timeout])
-}
+*/
 
 var APIManager = {
 
@@ -59,21 +46,8 @@ var APIManager = {
     this.apiroot = apiroot
     this.debug = !!debug ? debug : false
 
-    this.debugger ("init ()", {...options, version: VERSION})
-
-    return new Promise ((resolve, reject) => {
-      const pathFull = `${this.apiroot}/status`
-      const fetchParams = getFetchPostParams()
-      setTimeout (() => { // weird IE bug
-        fetch (pathFull, fetchParams)
-        .then (res => {
-          if (res.status == 200)  { return res.json () }
-          else                    { reject (res) }
-        })
-        .then (resJSON => { resolve (resJSON) })
-        .catch (err =>    { reject (err) })
-      }, 1)
-    })
+    this.debugger ("init ()", Object.assign ({}, options, {version: VERSION}))
+    return this.fetchAPI ({path: "status"})
   },
 
   debugger (msg, data = null, type = "default") { // 
@@ -89,7 +63,6 @@ var APIManager = {
   fetchAPI (params) { // ONLY WORKS FOR GET REQUESTS!
 
     if (!this.apiroot) {
-      debugger
       return new Promise ((resolve, reject) => {
         this.debugger ("fetchAPI (): missing apiroot param in init ()", params, "error")
         reject (new CustomError (null, "NoApiRoot"))
@@ -119,7 +92,7 @@ var APIManager = {
       return resJSON 
     })
     .catch ((error) => {
-      const {message, data} = error // is ALWAYS a CustomError!
+      const {data, message} = error 
       if (message == "Timeout") {
         if (params.retries > 0) {
           return this.fetchAPI (Object.assign ({}, params, {retries: params.retries - 1, timeout: params.timeout + 1000}) )
@@ -134,8 +107,12 @@ var APIManager = {
           const {response} = errorJSON
           const {errorFull} = response || {errorFull: {}}
           const {file, line, message} = errorFull
-          throw new CustomError ({...data, file, line, message}, "Server")
+          // throw new CustomError ({...data, file, line, message}, "Server")
+          throw new CustomError (Object.assign ({}, data, {file, line, message}), "Server")
         })
+      }
+      else if (!data) {
+        throw new CustomError ({}, "NetworkRequestFailed")
       }
       else {
         throw error
@@ -143,4 +120,6 @@ var APIManager = {
     })
   },
 }
-export default APIManager
+module.exports = {
+  APIManager,
+}
