@@ -1,5 +1,5 @@
 
-//  v0.0.3 - see https://github.com/skizzo/react-api-manager/blob/master/CHANGELOG.md
+//  v0.0.4 - see https://github.com/skizzo/react-api-manager/blob/master/CHANGELOG.md
 
 var log = require ("log-with-style")
 import "whatwg-fetch"
