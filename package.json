@@ -1,6 +1,6 @@
 {
   "name": "react-api-manager",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "API Manager used in many of my React.js projects.",
   "main": "index.js",
   "scripts": {
@@ -34,7 +34,6 @@
   "dependencies": {
     "jest-resolve": "^21.1.0",
     "jest-resolve-dependencies": "^21.1.0",
-    "log-with-style": "^0.3.0",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {

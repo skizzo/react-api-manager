@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [v0.0.8]
+
+- Removed log-with-style, otherwise jest tests fail because there is no "window" :/
 
 ## [v0.0.3]
 

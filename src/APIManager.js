@@ -1,6 +1,5 @@
-const VERSION = "0.0.7"
+const VERSION = "0.0.8"
 
-var log = require ("log-with-style")
 require ("whatwg-fetch")
 
 class CustomError extends Error {
@@ -57,7 +56,7 @@ var APIManager = {
     const colorBG = type == "error" ? "red" : "black"
     const colorFG = "white"
 
-    log (`[c="color: ${colorFG}; background: ${colorBG};"][APIManager.js][c]: ` + msg, data)
+    console.log (`[APIManager.js]: ` + msg, data)
   },
 
   fetchAPI (params) { // ONLY WORKS FOR GET REQUESTS!
