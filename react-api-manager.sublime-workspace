@@ -15,6 +15,42 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 267,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1509,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 847,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "git tag v0.1.0 && git push origin master --tags\n",
+			"settings":
+			{
+				"buffer_size": 48,
+				"line_ending": "Unix",
+				"name": "git tag v0.1.0 && git push origin master --tags"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -48,7 +84,8 @@
 	},
 	"expanded_folders":
 	[
-		"/Volumes/HDD1/GitHub/react-api-manager"
+		"/Volumes/HDD1/GitHub/react-api-manager",
+		"/Volumes/HDD1/GitHub/iazzu/app/node_modules/react-native-fs"
 	],
 	"file_history":
 	[
@@ -60,7 +97,7 @@
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -75,6 +112,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"common.js",
+			".js",
 			"”",
 			"“",
 			"resetCache",
@@ -112,8 +151,133 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 267,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"markdonw_live_preview_last_run": 1505951780.08,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"markdonw_live_preview_last_run": 1505951805.52,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 48,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								47,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "git tag v0.1.0 && git push origin master --tags",
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],

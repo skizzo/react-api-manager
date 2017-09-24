@@ -1,8 +1,8 @@
 
-//  v0.0.2 - see https://github.com/skizzo/react-api-manager/blob/master/CHANGELOG.md
+//  v0.0.3 - see https://github.com/skizzo/react-api-manager/blob/master/CHANGELOG.md
 
-import "whatwg-fetch"
 var log = require ("log-with-style")
+import "whatwg-fetch"
 
 class CustomError extends Error {
   constructor (data = null, ...args) {
@@ -10,7 +10,7 @@ class CustomError extends Error {
     this.data = data;
   }
 }
- 
+
 const getTimeoutPromise = (ms, promise, contentObj = {type: "Timeout"}) => {
   return new Promise ((resolve, reject) => {
     setTimeout (() => {
@@ -48,6 +48,13 @@ var APIManager = {
 
   init (options) {
     const {apiroot, debug} = options
+
+    if (!apiroot) {
+      return new Promise ((resolve, reject) => {
+        reject (new CustomError (null, "NoApiRoot"))
+      })
+    }
+
     this.apiroot = apiroot
     this.debug = !!debug ? debug : false
 
@@ -80,16 +87,22 @@ var APIManager = {
 
   fetchAPI (params) { // ONLY WORKS FOR GET REQUESTS!
 
+    if (!this.apiroot) {
+      debugger
+      return new Promise ((resolve, reject) => {
+        this.debugger ("fetchAPI (): missing apiroot param in init ()", params, "error")
+        reject (new CustomError (null, "NoApiRoot"))
+      })
+    }
+
     const fetchURLAdd = !params.params ? "" :"?" + Object.keys (params.params).map (k => encodeURIComponent (k) + "=" + encodeURIComponent (params.params[k])).join ("&")
 
+    if (!params.path)                 params.path = ""
+    if (!params.params)               params.params = {}
     if (!params.timeout)              params.timeout = 10000
     if (params.retries == undefined)  params.retries = 5
-    if (!params.params)               params.params = {}
-    if (!params.path)                 params.path = ""
 
     params.pathFull = `${this.apiroot}${params.path}${fetchURLAdd}`
-
-    // console.log (`APIManager.fetchAPI (${JSON.stringify (params, null, 2)})`)
 
     return getTimeoutPromise (params.timeout, fetch (params.pathFull))
     .then (res => { 
